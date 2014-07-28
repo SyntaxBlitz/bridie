@@ -1,0 +1,17 @@
+<h1>Posts</h1>
+
+<%= form_for(:post, remote: true) do |f| %>
+	<p>
+		Create a new post:
+	</p>
+	<p>
+		<%= f.text_area :text %>
+	</p>
+	<p>
+		<%= f.submit %>
+	</p>
+<% end %>
+
+<div>
+	<%= render @posts %>
+</div>
