@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   end
 
   def create
-  	@user = User.new(params[:user])
+  	@post = Post.new(params[:post])
 
   	respond_to do |format|
   		if @post.save
