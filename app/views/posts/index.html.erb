@@ -1,17 +1,19 @@
-<h1>Posts</h1>
+<div id="container">
+	<h1>Posts</h1>
 
-<%= form_for(@post, url: posts_path, remote: true) do |f| %>
-	<p>
-		Create a new post:
-	</p>
-	<p>
-		<%= f.text_area :text %>
-	</p>
-	<p>
-		<%= f.submit %>
-	</p>
-<% end %>
+	<%= form_for(@post, url: posts_path, remote: true) do |f| %>
+		<p>
+			Create a new post:
+		</p>
+		<p>
+			<%= f.text_area :text %>
+		</p>
+		<p>
+			<%= f.submit %>
+		</p>
+	<% end %>
 
-<div>
-	<%= render @posts %>
+	<div id="posts">
+		<%= render @posts %>
+	</div>
 </div>
