@@ -1,14 +1,14 @@
 <div id="container">
 	<%= form_for(@post, url: posts_path, remote: true) do |f| %>
-		<p>
+		<div id="newPostText">
 			New post
-		</p>
-		<p>
+		</div>
+		<div id="newPostField">
 			<%= f.text_area :text %>
-		</p>
-		<p>
+		</div>
+		<div id="newPostSubmit">
 			<%= f.submit %>
-		</p>
+		</div>
 	<% end %>
 
 	<div id="posts">
