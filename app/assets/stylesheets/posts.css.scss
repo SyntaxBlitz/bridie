@@ -35,6 +35,8 @@ body {
 	width: $container-computed-width - ($textarea-padding * 2) - 2px;	// border adds an extra 2px
 	height: 200px;
 	padding: $textarea-padding;
+
+	resize: vertical;
 }
 
 #newPostSubmit {
