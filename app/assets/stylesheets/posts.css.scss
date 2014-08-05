@@ -24,6 +24,11 @@ body {
 	background-color: white;
 }
 
+#newPostField textarea {
+	width: 100%;
+	height: 200px;
+}
+
 .post {
 	margin-bottom: 10px;
 }
