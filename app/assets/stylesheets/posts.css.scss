@@ -2,6 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$container-horizontal-padding: 60px;
+$container-vertical-padding: 30px;
+$container-width: 700px;
+$container-computed-width: $container-width - ($container-horizontal-padding * 2);
+
+$textarea-padding: 5px;
+
 body {
 	background-color: #f2f2f2;
 
@@ -12,21 +19,30 @@ body {
 }
 
 #container {
-	width: 700px - (60px * 2);
+	width: $container-computed-width;
 	margin-left: auto;
 	margin-right: auto;
 
-	padding-left: 60px;
-	padding-right: 60px;
-	padding-top: 30px;
-	padding-bottom: 30px;
+	padding-left: $container-horizontal-padding;
+	padding-right: $container-horizontal-padding;
+	padding-top: $container-vertical-padding;
+	padding-bottom: $container-vertical-padding;
 
 	background-color: white;
 }
 
 #newPostField textarea {
-	width: 100%;
+	width: $container-computed-width - ($textarea-padding * 2) - 2px;	// border adds an extra 2px
 	height: 200px;
+	padding: $textarea-padding;
+}
+
+#newPostSubmit {
+	text-align: right;
+	width: 100%;
+	input {
+		margin: 0;
+	}
 }
 
 .post {
