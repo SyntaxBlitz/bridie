@@ -5,3 +5,7 @@ from django.db import models
 class User(models.Model):
 	display_name = models.CharField(max_length=64)
 	auth_key = models.CharField(max_length=64)
+
+class Post(models.Model):
+	user = models.ForeignKey(User)
+	text = models.CharField(max_length=4000)
