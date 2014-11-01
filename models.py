@@ -9,6 +9,7 @@ class User(models.Model):
 class Post(models.Model):
 	user = models.ForeignKey(User)
 	text = models.CharField(max_length=4000)
+	last_modified = models.DateTimeField()
 
 class Comment(models.Model):
 	user = models.ForeignKey(User)
